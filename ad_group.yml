@@ -1,0 +1,17 @@
+- hosts: win
+  tasks:
+  - name: Create group with delete protection enabled and custom attributes
+    community.windows.win_domain_group:
+      name: Ansible Users
+      scope: domainlocal
+      category: security
+      domain_password: <PASSWORD>
+      domain_server: 192.168.1.246
+      domain_username: julianocosta.local\juliano.costa
+      organizational_unit: OU=Grupos Banco de Dados,OU=JULIANOCOSTA,DC=julianocosta,DC=local
+      state: present
+      attributes:
+        mail: helpdesk@ansible.com
+        wWWHomePage: www.ansible.com
+      ignore_protection: yes
+

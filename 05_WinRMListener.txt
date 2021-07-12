@@ -1,0 +1,21 @@
+winrm enumerate winrm/config/Listener
+
+Listener
+    Address = *
+    Transport = HTTP
+    Port = 5985
+    Hostname
+    Enabled = true
+    URLPrefix = wsman
+    CertificateThumbprint
+    ListeningOn = 127.0.0.1, 192.168.1.247, ::1
+
+Listener
+    Address = *
+    Transport = HTTPS
+    Port = 5986
+    Hostname = SERVER2016
+    Enabled = true
+    URLPrefix = wsman
+    CertificateThumbprint = 5D72FAB1B45B02D88FA75F1C26CB2423B9C9F571
+    ListeningOn = 127.0.0.1, 192.168.1.247, ::1

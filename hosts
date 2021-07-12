@@ -1,0 +1,9 @@
+[win]
+192.168.1.247
+
+[win:vars]
+ansible_user="Juliano Costa"
+#ansible_user="JULIANOCOSTA\juliano.costa"
+ansible_password=<PASSWORD>
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

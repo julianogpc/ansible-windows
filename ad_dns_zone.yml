@@ -1,0 +1,8 @@
+- hosts: win
+  tasks:
+  - name: Ensure primary zone is present
+    community.windows.win_dns_zone:
+      name: julianocosta.com.br
+      replication: domain
+      type: primary
+      state: present
